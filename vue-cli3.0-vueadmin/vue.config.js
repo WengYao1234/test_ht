@@ -13,8 +13,8 @@ function resolve(dir) {
 }
 const proxyTargetMap = {
     prod: 'https://xxx.xxx.com/',
-    randy: 'http://47.105.71.81:3306',
-    peter: 'http://192.168.11.178:3001'
+    randy: 'http://47.105.71.81:3306', //远程后台
+    peter: 'http://192.168.11.178:3001' //本地后台
 }
 let proxyTarget = proxyTargetMap[process.env.API_TYPE] || proxyTargetMap.prod
 let publicPath = process.env.NODE_ENV === 'production' ? '/' : '/'
